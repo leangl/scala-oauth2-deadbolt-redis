@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                                           controllers.Application.index
+
+POST    /oauth2/token                               controllers.OAuth2Controller.token
+
+# Delete all of this
+GET     /oauth2/test                                controllers.ProtectedController.tokenPresent
+GET     /oauth2/test/scope/single                   controllers.ProtectedController.singleScope
+GET     /oauth2/test/scope/anotherSingle            controllers.ProtectedController.anotherSingleScope
+GET     /oauth2/test/scope/inclusive                controllers.ProtectedController.inclusiveScopes
+GET     /oauth2/test/scope/exclusive                controllers.ProtectedController.exclusiveScopes
+GET     /oauth2/test/java                           controllers.ProtectedJavaController.tokenPresent
+GET     /oauth2/test/java/scope/single              controllers.ProtectedJavaController.singleScope
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
