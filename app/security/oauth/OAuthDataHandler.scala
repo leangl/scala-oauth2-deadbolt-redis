@@ -55,7 +55,7 @@ class OAuthDataHandler @Inject()(accountService: AccountService, sedisPool: Pool
     val clientId = authInfo.clientId.get
 
     for (existing <- getAccessToken(username, clientId)) {
-      w.del(s"oauth:refresh_token:${existing.refreshToken}")
+      w.del(s"oauth:refresh_token:${existing.refreshToken.get}")
       w.del(s"oauth:access_token:${existing.token}")
     }
 
@@ -73,9 +73,8 @@ class OAuthDataHandler @Inject()(accountService: AccountService, sedisPool: Pool
 
   def getStoredAccessToken(authInfo: AuthInfo[AccountInfo]): Future[Option[AccessToken]] = {
     Future.successful(getAccessToken(authInfo.user.username, authInfo.clientId.get) match {
-      case Some(token) if !token.scope.equals(authInfo.scope) => None // TODO if scope changed
-      case Some(token) => Some(token)
-      case None => None
+      case Some(token) if token.scope.equals(authInfo.scope) => Some(token)
+      case _ => None // no previous token or scope changed
     })
   }
 
