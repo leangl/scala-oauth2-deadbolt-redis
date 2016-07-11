@@ -33,8 +33,7 @@ class OAuthDataHandler @Inject()(accountService: AccountService, sedisPool: Pool
     Future.successful(
       accountService.getUser(request.param("username").get) match {
         case Some(user) if user.isPasswordValid(request.param("password").get) => Some(AccountInfo(user.username))
-        case Some(user) => None
-        case None => None
+        case _ => None
       }
     )
   }
