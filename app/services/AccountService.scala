@@ -1,13 +1,8 @@
 package services
 
-import java.time.{Clock, Instant}
 import javax.inject._
 
 import org.mindrot.jbcrypt.BCrypt
-import play.api.Logger
-import play.api.inject.ApplicationLifecycle
-
-import scala.concurrent.Future
 
 /**
   * Mock service that simply returns a hardcoded user. Replace this by a real service implementation.

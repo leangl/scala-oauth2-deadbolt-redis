@@ -4,7 +4,7 @@ import javax.inject.Inject
 
 import org.joda.time.DateTime
 import org.sedis.Pool
-import play.api.{Configuration, Logger}
+import play.api.Configuration
 import play.api.libs.Crypto
 import play.api.libs.functional.syntax._
 import play.api.libs.json.{Format, Json, _}
