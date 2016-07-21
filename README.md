@@ -1,5 +1,5 @@
 # scala-oauth2-deadbolt-redis
-Play framework template integrating Deadbolt plugin with a OAuth 2 server, backed by Redis.
+Play framework template integrating Deadbolt plugin with an OAuth 2 server, backed by Redis.
 
 # How does this work?
  
