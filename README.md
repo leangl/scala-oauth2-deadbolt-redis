@@ -47,7 +47,7 @@ https://github.com/nulab/scala-oauth2-provider
 ```
 The MIT License (MIT)
 
-Copyright (c) 2016 Bloder
+Copyright (c) 2016 Leandro Glossman
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
