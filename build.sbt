@@ -4,18 +4,18 @@ version := "1.0-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
   jdbc,
   //cache,
   ws,
   "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test,
-  "be.objectify" %% "deadbolt-java" % "2.5.0",
+  "be.objectify" %% "deadbolt-java" % "2.5.1",
   "be.objectify" %% "deadbolt-scala" % "2.5.0",
   "com.typesafe.play.modules" %% "play-modules-redis" % "2.5.0",
   "org.mindrot" % "jbcrypt" % "0.3m",
-  "com.nulab-inc" %% "play2-oauth2-provider" % "0.17.2"
+  "com.nulab-inc" %% "play2-oauth2-provider" % "0.18.0"
 )
 
 resolvers += Resolver.mavenLocal
