@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lglossman/scala-oauth2-deadbolt-redis.svg?branch=master)](https://travis-ci.org/lglossman/scala-oauth2-deadbolt-redis)
+
 # scala-oauth2-deadbolt-redis
 Play framework template integrating Deadbolt plugin with an OAuth 2 server, backed by Redis.
 
