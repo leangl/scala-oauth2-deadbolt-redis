@@ -10,10 +10,10 @@ import scalaoauth2.provider._
 @Singleton
 class OAuthTokenEndpoint extends TokenEndpoint {
   override val handlers = Map(
-    //OAuthGrantType.AUTHORIZATION_CODE -> new AuthorizationCode(),
+    OAuthGrantType.AUTHORIZATION_CODE -> new AuthorizationCode(),
     OAuthGrantType.REFRESH_TOKEN -> new RefreshToken(),
     //OAuthGrantType.CLIENT_CREDENTIALS -> new ClientCredentials(),
-    //OAuthGrantType.IMPLICIT -> new Implicit()
+    //OAuthGrantType.IMPLICIT -> new Implicit(),
     OAuthGrantType.PASSWORD -> new Password()
   )
 }

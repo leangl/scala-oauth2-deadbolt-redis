@@ -15,7 +15,8 @@ libraryDependencies ++= Seq(
   "be.objectify" %% "deadbolt-scala" % "2.5.0",
   "com.typesafe.play.modules" %% "play-modules-redis" % "2.5.0",
   "org.mindrot" % "jbcrypt" % "0.3m",
-  "com.nulab-inc" %% "play2-oauth2-provider" % "0.18.0"
+  "com.nulab-inc" %% "play2-oauth2-provider" % "1.0.0",
+  "com.typesafe.slick" %% "slick" % "3.1.1"
 )
 
 resolvers += Resolver.mavenLocal
